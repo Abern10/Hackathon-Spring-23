@@ -361,8 +361,11 @@
         },
     ]
     
+    function updateFrame() {
+			var courseNumber = document.getElementById("courseNumber").value;
+			var courseInfo;
 
-    if (courseNumber === "107") {
+			if (courseNumber === "107") {
     courseInfo = cs107[0];
     } else if (courseNumber === "109") {
     courseInfo = cs109[0];
@@ -446,16 +449,15 @@
         console.log("Course not found.");
     }
 
-    // Print the course information
     if (courseInfo) {
-        document.write("Course number: " + courseInfo);
-        document.write("Title: " + courseInfo.title);
-        document.write("Professor: " + courseInfo.professor);
-        document.write("Description: " + courseInfo.description);
-    } else {
-        document.write("Course not found.");
+        var courseFrame = document.getElementById("courseFrame");
+        courseFrame.srcdoc = "<h2>" + courseInfo.number + ": " + courseInfo.title + "</h2>" +
+                            "<p><strong>Professor:</strong> " + courseInfo.professor + "</p>" +
+                            "<p><strong>Description:</strong> " + courseInfo.description + "</p>";
     }
+		}
 
+    
     
 
     </script>

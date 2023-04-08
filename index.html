@@ -25,7 +25,9 @@
 
 <header class="fixed-header">
     <div class="mainHeader">
-        <img src="../assets/hackhives.png" alt="logo" class="logo">
+        <a href="index.html">
+            <img src="../assets/hackhives.png" alt="logo" class="logo">
+        </a>
         <nav>
             <a href="index.html"><img src=""></a>
                 <ul class="nav-links-header" id="navLinks"> 
@@ -88,7 +90,7 @@
 
                         </ul>
                     </li>
-                    <li><a href="100lvl.html">INFO</a></li>
+                    <li><a href="info.html">INFO</a></li>
                 </ul>
         </nav>
     </div>
@@ -122,61 +124,18 @@
             Still deciding on what Computer Science classes to take for next semester... Seach for the class through the course number below for a rating out of 5 stars, a short description and professors you can take the class with!
         </p>
     </section>
-
     <div class="search-bar-div">
-        <div class="search-bar">
-            <form action="course.html" method="get" id="search-form">
-                <input type="text" id="search-input" placeholder="Search for a Computer Science class..." name="query">
-                <button type="submit">Search</button>
-                <div class="autocom-box">
-                    <li>107</li>
-                    <li>109</li>
-                    <li>111</li>
-                    <li>141</li>
-                    <li>151</li>
-                    <li>211</li>
-                    <li>251</li>
-                    <li>261</li>
-                    <li>294</li>
-                    <li>301</li>
-                    <li>341</li>
-                    <li>342</li>
-                    <li>351</li>
-                    <li>361</li>
-                    <li>362</li>
-                    <li>377</li>
-                    <li>394</li>
-                    <li>401</li>
-                    <li>407</li>
-                    <li>411</li>
-                    <li>412</li>
-                    <li>418</li>
-                    <li>422</li>
-                    <li>425</li>
-                    <li>427</li>
-                    <li>440</li>
-                    <li>442</li>
-                    <li>450</li>
-                    <li>454</li>
-                    <li>461</li>
-                    <li>466</li>
-                    <li>474</li>
-                    <li>477</li>
-                    <li>478</li>
-                    <li>479</li>
-                    <li>480</li>
-                    <li>483</li>
-                    <li>491</li>
-                    <li>494</li>
-                    <li>499</li>
-                </div>
-                <ul id="output"></ul>
-                <script src="suggested.js"></script>
-                <script src="searchScript.js"></script>
-                <script src="classes.js"></script>
-            <!-- </form> -->
-        </div>
-    </div>
+        <div class="searchInput">
+              <form action="course.html" method="get" id="search-form">
+                  <input type="text" placeholder="Search for a Computer Science class...">
+                  <div class="resultBox">
+                    
+                  </div>
+                  <div class="icon"><i class="fas fa-search"></i></div>
+              </form>
+          </div>
+      </div>
+      <script src="search.js"></script>
 </body>
 
 <footer>

@@ -16,14 +16,11 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" />
 
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
 
     <script src="https://kit.fontawesome.com/e12bbd4383.js" crossorigin="anonymous"></script>
 
     <script src="index.js"></script>
-    
-
-    
 </head>
 
 <header class="fixed-header">
@@ -97,32 +94,34 @@
                 </ul>
         </nav>
     </div>
-    
-    <div class="BlueBarHeader">
-        <h2>Computer Science Class Search</h1>
-        <h4>at the University of Illinois At Chicago</h3>
+
+<body class="info-body">
+    <div class="info-img">
+        <div class="pedro-descrip">
+
+        </div>
     </div>
-</header>
 
-<body>
+    <div class="info-img">
+        <div class="alex-descrip">
+            
+        </div>
+    </div>
 
-    <section class="class-section1">
-        <div id = "courseNumber"></div>
-            <script src = "classes.js"></script>
-            <script>
-                const queryString = window.location.search;
-                const urlParams = new URLSearchParams(queryString);
-                const classValue = urlParams.get('class');
-                console.log(typeof classValue);
-                updateFrame(classValue);
-              </script>
-        
-        
-    </section>
+    <div class="info-img">
+        <div class="alex-descrip">
+            
+        </div>
+    </div>
 
+    <div class="info-img">
+        <div class="alex-descrip">
+            
+        </div>
+    </div>
 </body>
 
-<!-- <footer>
+<footer>
     <a href="#" class="footer__logo">UIC CS Class Search</a>
 
     <ul class="permalinks">
@@ -136,6 +135,6 @@
     <div class="footer__copyright">
         <small>&copy; Hack Hives. All Rights Reserved</small>
     </div>
-</footer> -->
+</footer>
 
 </html>

@@ -95,14 +95,14 @@ strong {
     font: var(--ff-primary);
     font-weight: bold;
     text-decoration: none;
-    /* position: right; */
-    padding-left: 15rem;
+    position: right;
+    padding-left: 17rem;
     font-size: larger;
 }
 
 .nav-links-header{
     position: relative;
-    margin-left: 500px;
+    margin-left: 15px;
 }
 
 .BlueBarHeader {
@@ -140,13 +140,6 @@ strong {
     width: 100%;
 }
 
-.search-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
 .search-description p{
     display: block;
     text-align: center;
@@ -161,52 +154,7 @@ strong {
 
 }
 
-.search-bar-div {
-    padding-top: 5rem;
-}
 
-
-.search-bar input[type="text"] {
-    border: none;
-    border-radius: 30px;
-    padding: 2px;
-    font-size: 16px;
-    /* background-color: #grey; */
-    background-image: url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_search_48px-512.png");
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    background-position: 22rem;
-    transition: all 0.3s ease-in-out;
-    width: 400px; /* fixed width */
-    height: 50px;
-    text-align: center;
-    color: grey;
-    padding-left: 20px;
-}
-  
-.search-bar input[type="text"]::before {
-    content: "";
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-image: url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_search_48px-512.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 10px;
-    transition: all 0.3s ease-in-out;
-}
-
-.search-bar input[type="text"]:focus {
-    outline: none; 
-    content: "";
-    text-align: left;
-    background-position: 24rem;
-    display: block;
-}
-
-/* .search-bar input[type="text"]::placeholder {
-color: blue; /* Add placeholder text color */
 .BlueHeader-Links a{
 color: #f6f6f6;
 font: var(--ff-primary);
@@ -276,6 +224,18 @@ border-color: transparent;
     transform: translate(-50%, -50%);
 }
 
+.info-body{
+    background-color: green;
+    
+}
+.info-img{
+    background-color: black;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    height: 50px;
+    width: 50px;
+}
+
 /* media quires- small */
 
 @media screen and (max-width: 600px){
@@ -343,33 +303,66 @@ border-color: transparent;
     border-bottom: none;
 }
 
-.search-bar .autocom-box{
-    padding:0px;
-    max-height: 280px;
-    overflow-y: auto;
-    opacity: 0;
-    pointer-events: none;
-}
 
-.search-bar.active .autocom-box{
-    padding:10px 8px;
-    opacity: 0;
-    pointer-events: none;
+.search-bar-div{
+  max-width: 450px;
+  margin: 150px auto;
 }
-
-.autocom-box li{
-    list-style: none;
-    padding: 8px 12px;
-    width: 100%;
-    cursor: default;
-    border-radius: 3px;
-    display: none;
+.search-bar-div .searchInput{
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
 }
-
-.search-bar.active .autocom-box li{
-    display: block;
+.searchInput input{
+  height: 55px;
+  width: 82%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
 }
-
-.autocom-box li:hover{
-    background-color: #efefef;
+.searchInput.active input{
+  border-radius: 5px 5px 0 0;
+}
+.searchInput .resultBox{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.searchInput.active .resultBox{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.resultBox li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+.searchInput.active .resultBox li{
+  display: block;
+}
+.resultBox li:hover{
+  background: #efefef;
+}
+.searchInput .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #644bff;
+  cursor: pointer;
 }
