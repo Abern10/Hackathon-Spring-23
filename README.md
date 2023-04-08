@@ -9,7 +9,7 @@ To find a specific course simply search for it or look through the drop down men
 
 Once you are in the course page, there will be a bar chart which shows the average rating of the overall rating, difficulty level, and course load. We used a 1-5 scale, where 1 is the easiest, and 5 is the hardest. We calculated the average of the scores that students gave for each criteria and made a bar chart to visually represent that.
 
-Underneath the barchart there will be a ratings form that students can fill out if they have taken the class before. The submissions will be used to calculate the values for the barcharts above it. And there will be an area for you to submit comments about the course.
+Underneath the barchart there will be a ratings form that students can fill out if they have taken the class before. The submissions will be used to calculate the values for the barcharts above it. And there will be an area for you to submit reviews about the course.
 
 When you are submitting a review make sure the course number is a valid number, and when you are rating the class make sure it is between the values of 1 and 5.
 
