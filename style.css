@@ -75,13 +75,34 @@ strong {
     padding-right: 4rem;
 }
 
+.fixed-header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1;
+    transition: all 600ms ease;
+}
+
+.logo{
+    padding-bottom: 2em;
+}
+
   
 .nav-links-header a{
-    margin-right: 3rem; /* Adjust as needed */
+    margin-right: 2rem; 
     color: var(--clr-blue);
     font: var(--ff-primary);
     font-weight: bold;
     text-decoration: none;
+    /* position: right; */
+    padding-left: 15rem;
+    font-size: larger;
+}
+
+.nav-links-header{
+    position: relative;
+    margin-left: 500px;
 }
 
 .BlueBarHeader {
@@ -98,6 +119,7 @@ strong {
     color: var(--clr-white);
     
 }
+
 .BlueBarHeader h4 {
     margin-top: 0;
     color: var(--clr-white);
@@ -113,19 +135,38 @@ strong {
 }
 
 .CodingPicture img{
+    padding-top: 13rem;
     height: 600px;
     width: 100%;
 }
 
 .search-bar {
-    margin: 0 auto;
-    /* margin-top: 1rem; */
-    max-width: 500px; 
-    position: center;
-    resize: none;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
-  
-  .search-bar input[type="text"] {
+
+.search-description p{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-left: 35rem;
+    padding-top: 3rem;
+    padding-right: 35rem;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.search-bar-div {
+    padding-top: 5rem;
+}
+
+
+.search-bar input[type="text"] {
     border: none;
     border-radius: 30px;
     padding: 2px;
@@ -134,15 +175,16 @@ strong {
     background-image: url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_search_48px-512.png");
     background-size: 20px 20px;
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: 22rem;
     transition: all 0.3s ease-in-out;
-    width: 80%;
+    width: 400px; /* fixed width */
     height: 50px;
     text-align: center;
     color: grey;
-  }
+    padding-left: 20px;
+}
   
-  .search-bar input[type="text"]::before {
+.search-bar input[type="text"]::before {
     content: "";
     display: inline-block;
     width: 25px;
@@ -153,76 +195,181 @@ strong {
     background-position: center;
     margin-right: 10px;
     transition: all 0.3s ease-in-out;
-  }
+}
 
-  .search-bar input[type="text"]:focus {
+.search-bar input[type="text"]:focus {
     outline: none; 
-    /* background-color: transparent; */
-  }
+    content: "";
+    text-align: left;
+    background-position: 24rem;
+    display: block;
+}
 
-  /* .search-bar input[type="text"]::placeholder {
-    color: blue; /* Add placeholder text color */
-  .BlueHeader-Links a{
-    color: #f6f6f6;
-    font: var(--ff-primary);
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.75rem;
-  }
+/* .search-bar input[type="text"]::placeholder {
+color: blue; /* Add placeholder text color */
+.BlueHeader-Links a{
+color: #f6f6f6;
+font: var(--ff-primary);
+font-weight: bold;
+text-decoration: none;
+font-size: 1.75rem;
+}
 
-  .BlueHeader-Links i{
+.BlueHeader-Links i{
     font-size: x-large;
     padding: .5rem;
-  }
+}
 
-  .BlueHeader-Links{
-    text-align: center;
-    padding: 10px
-  }
+.BlueHeader-Links{
+text-align: center;
+padding: 10px
+}
+
 footer{
-    background: var(--clr-blue);
-    padding: 3rem 0;
-    text-align: center;
-    font-size: .9rem;
-    margin-top: 7rem;   
+background: var(--clr-blue);
+padding: 3rem 0;
+text-align: center;
+font-size: .9rem;
+margin-top: 7rem;   
 }
 
 footer a{
-    color: var(--color-white);
+color: var(--color-white);
 }
 
 .footer__logo{
-    font-size: 2rem;
-    font-weight: 500;
-    margin-top: 2rem;
-    display: inline-block;
+font-size: 2rem;
+font-weight: 500;
+margin-top: 2rem;
+display: inline-block;
 }
 
 .permalinks{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0 auto 3rem;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 2rem;
+margin: 0 auto 3rem;
 }
 
 .footer__copyright{
-    margin-bottom: 4rem;
-    color: var(--color-white);
+margin-bottom: 4rem;
+color: var(--color-white);
 }
 
 .buttonlinks{
-    background-color: transparent;
-    border-color: transparent;
+background-color: transparent;
+border-color: transparent;
 }
 
+.BlueHeader-Links i:hover{
+    transform: rotate(360deg);
+    transition: var(--transition);
+}
+
+.class-section1 {
+    margin-top: 20rem;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* media quires- small */
+
+@media screen and (max-width: 600px){
+    .permalinks{
+    flex-direction: column;
+    gap: 1.5rem;
+    }
+}
+
+.nav-links-header li{
+    float: left;
+    list-style: none;
+    position: relative;
+}
+
+.nav-links-header li a{
+    display: block;
+    color: #011E62;
+    font-size: 24px;
+    padding: 22px 14px;
+    text-decoration: none;
+    overflow-x: hidden;
+    padding-left: 50px; /* add left padding */
+}
+
+.nav-links-header li ul{
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    /* padding: 10px; */
+    border-radius: 0px 0px 4px 4px;
+    max-height: 200px; /* set a maximum height for the dropdown */
+    overflow-y: auto; /* allow vertical scrolling */
+
+}
+
+.nav-links-header li ul::-webkit-scrollbar {
+    display: none; /* hide the scrollbar */
+  }
+
+.nav-links-header li:hover ul{
+    display: block;
+
+}
+
+
+.nav-links-header li ul li { 
+   /* width: 90px; */
+   border-radius: 4px;
+
+}
+
+.nav-links-header li ul li a{ 
+
+    padding: 0 0;
+
+}
  
- /* media quires- small */
- 
- @media screen and (max-width: 600px){
-     .permalinks{
-        flex-direction: column;
-        gap: 1.5rem;
-     }
-     
- }
+.nav-links-header li ul li a:hover{ 
+    background-color: lightgrey;
+    
+}
+
+.nav-links-header li ul li:last-child{
+    border-bottom: none;
+}
+
+.search-bar .autocom-box{
+    padding:0px;
+    max-height: 280px;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.search-bar.active .autocom-box{
+    padding:10px 8px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.autocom-box li{
+    list-style: none;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+    display: none;
+}
+
+.search-bar.active .autocom-box li{
+    display: block;
+}
+
+.autocom-box li:hover{
+    background-color: #efefef;
+}
