@@ -27,6 +27,17 @@
 
     --bs: 0.25em 0.25em .75em rgba(0, 0, 0, .25), 
         0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+
+    --color-bg: #1f1f38;
+    --color-bg-variant: #696969;
+    --color-primary: #C0C0C0;
+    --color-primary-variant: #2F4F4F;
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.6);
+    --transition: all 600ms ease;
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
 }
 
 
@@ -43,6 +54,7 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
+    
 }
 
 strong {
@@ -74,7 +86,7 @@ strong {
 
 .BlueBarHeader {
     /* margin-bottom: 1rem; */
-    background: var(--clr-blue);
+    background: linear-gradient(45deg,  var(--clr-blue), lightgrey);
     height: 6rem;
     text-align: left; /* Push the text to the right */
     padding-left: 125px; /* Add padding on the left */
@@ -92,7 +104,7 @@ strong {
 }
 
 .lowerHeader{
-    background: var(--clr-blue);
+    background: linear-gradient(45deg,  var(--clr-blue), lightgrey);
     /* margin-top: -5rem; */
 }
 
@@ -107,11 +119,11 @@ strong {
 
 .search-bar {
     margin: 0 auto;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     max-width: 500px; 
-    position: relative;
-   
-  }
+    position: center;
+    resize: none;    
+}
   
   .search-bar input[type="text"] {
     border: none;
@@ -150,4 +162,67 @@ strong {
 
   /* .search-bar input[type="text"]::placeholder {
     color: blue; /* Add placeholder text color */
-  
+  .BlueHeader-Links a{
+    color: #f6f6f6;
+    font: var(--ff-primary);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.75rem;
+  }
+
+  .BlueHeader-Links i{
+    font-size: x-large;
+    padding: .5rem;
+  }
+
+  .BlueHeader-Links{
+    text-align: center;
+    padding: 10px
+  }
+footer{
+    background: var(--clr-blue);
+    padding: 3rem 0;
+    text-align: center;
+    font-size: .9rem;
+    margin-top: 7rem;   
+}
+
+footer a{
+    color: var(--color-white);
+}
+
+.footer__logo{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+.permalinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto 3rem;
+}
+
+.footer__copyright{
+    margin-bottom: 4rem;
+    color: var(--color-white);
+}
+
+.buttonlinks{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+ 
+ /* media quires- small */
+ 
+ @media screen and (max-width: 600px){
+     .permalinks{
+        flex-direction: column;
+        gap: 1.5rem;
+     }
+     
+ }
