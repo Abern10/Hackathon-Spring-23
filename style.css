@@ -54,7 +54,6 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
-    
 }
 
 strong {
@@ -62,53 +61,72 @@ strong {
 }
 
 .mainHeader{
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: nowrap; 
-    margin-left: 4rem;
+  margin-top: -3rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: nowrap; 
+  margin-left: 2rem;
 
 }
 
+
 .mainHeader img{
-    height: 50px;
-    width: auto;
-    padding-right: 4rem;
+  height: 50px;
+  padding-right: 4rem;
+  display: inline-block;
 }
 
 .fixed-header{
-    position: fixed;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+  transition: all 600ms ease;
+}
+
+.fixed-header.visible{
     top: 0;
-    width: 100%;
-    background-color: #ffffff;
-    z-index: 1;
-    transition: all 600ms ease;
+}
+
+.fixed-header.hidden{
+    top: -100px;
 }
 
 .logo{
-    padding-bottom: 2em;
+  padding-top: 5.5rem;
+  display: inline-block; 
+  margin-right: 20px;
+  transition: var(--transition);
 }
 
-  
+.logo:hover{
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+}
+
 .nav-links-header a{
-    margin-right: 2rem; 
-    color: var(--clr-blue);
-    font: var(--ff-primary);
-    font-weight: bold;
-    text-decoration: none;
-    position: right;
-    padding-left: 17rem;
-    font-size: larger;
+  margin-right: 2rem; 
+  color: var(--clr-blue);
+  font: var(--ff-primary);
+  font-weight: bold;
+  text-decoration: none;
+  position: right;
+  /* padding-left: 17rem; */
+  font-size: larger;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .nav-links-header{
-    position: relative;
-    margin-left: 15px;
+  /* position: center; */
+  margin-left: 15px;
 }
 
 .BlueBarHeader {
     /* margin-bottom: 1rem; */
     background: linear-gradient(45deg,  var(--clr-blue), lightgrey);
-    height: 6rem;
+    height: 7rem;
     text-align: left; /* Push the text to the right */
     padding-left: 125px; /* Add padding on the left */
     padding-top: .5rem;
@@ -146,14 +164,13 @@ strong {
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding-left: 35rem;
+    padding-left: 30rem;
     padding-top: 3rem;
-    padding-right: 35rem;
+    font-size: 20px;
+    padding-right: 30rem;
     text-align: center;
     font-weight: bold;
-
 }
-
 
 .BlueHeader-Links a{
 color: #f6f6f6;
@@ -192,12 +209,34 @@ margin-top: 2rem;
 display: inline-block;
 }
 
+.footer-logo-img{
+    width: 100px;
+    height: 100px;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    display: inline-block; 
+}
+
 .permalinks{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 2rem;
-margin: 0 auto 3rem;
+    display: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-decoration: none;
+    gap: 2rem;
+    margin: 0 auto 3rem;
+}
+
+.permalinks a{
+    text-decoration: none;
+    text-align: center;
+    padding-right: .3rem;
+}
+
+.footer__logo{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center
 }
 
 .footer__copyright{
@@ -210,40 +249,73 @@ background-color: transparent;
 border-color: transparent;
 }
 
-.BlueHeader-Links i:hover{
-    transform: rotate(360deg);
-    transition: var(--transition);
-}
 
 .class-section1 {
-    margin-top: 20rem;
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-top: -10em;
+    background-color: transparent;
+    position: center;
+    padding-left: 5rem;
+
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
 }
 
-.info-body{
-    background-color: green;
-    
+.div1{
+    text-align: center;
 }
+
+.div2 h3{
+    text-align: center;
+}
+
+.div3 img{
+    padding: 1.5rem;
+}
+
+.div3{
+    margin-left: 1rem;
+}
+
+.div3 h3{
+    text-align: center;
+    margin-top: -1.85rem;
+}
+
+.div4 img{
+    padding: 0.9rem;
+}
+
+.div4 h3{
+    text-align: center;
+    margin-top: -0.7rem
+}
+
+.div5 h3{
+    text-align: center;
+    margin-top: 1rem
+}
+
 .info-img{
-    background-color: black;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    height: 50px;
-    width: 50px;
+    height: 250px;
+    width: 250px;
 }
 
-/* media quires- small */
+.parent { 
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: repeat(5, 1fr); 
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+    margin-top: 25rem;
 
-@media screen and (max-width: 600px){
-    .permalinks{
-    flex-direction: column;
-    gap: 1.5rem;
     }
-}
+
+    .div1 { grid-area: 1 / 1 / 2 / 7; } 
+    .div2 { grid-area: 2 / 2 / 6 / 3; } 
+    .div3 { grid-area: 2 / 3 / 6 / 4; } 
+    .div4 { grid-area: 2 / 4 / 6 / 5; } 
+    .div5 { grid-area: 2 / 5 / 6 / 6; } 
 
 .nav-links-header li{
     float: left;
@@ -315,6 +387,16 @@ border-color: transparent;
   position: relative;
   box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
 }
+
+.main .search-bar-div{
+    max-width: 450px;
+    margin-right: 7rem;
+    padding-top: 10rem;
+    margin-bottom: -5.5rem;
+    padding-bottom: -50rem;
+
+}
+
 .searchInput input{
   height: 55px;
   width: 82%;
@@ -328,18 +410,28 @@ border-color: transparent;
 .searchInput.active input{
   border-radius: 5px 5px 0 0;
 }
+
 .searchInput .resultBox{
-  padding: 0;
-  opacity: 0;
-  pointer-events: none;
-  max-height: 280px;
-  overflow-y: auto;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    width: 96.5%;
+    padding: 10px 8px;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
 }
 .searchInput.active .resultBox{
   padding: 10px 8px;
   opacity: 1;
   pointer-events: auto;
 }
+
+
 .resultBox li{
   list-style: none;
   padding: 8px 12px;
@@ -351,9 +443,11 @@ border-color: transparent;
 .searchInput.active .resultBox li{
   display: block;
 }
+
 .resultBox li:hover{
   background: #efefef;
 }
+
 .searchInput .icon{
   position: absolute;
   right: 0px;
@@ -365,4 +459,120 @@ border-color: transparent;
   font-size: 20px;
   color: #644bff;
   cursor: pointer;
+}
+
+
+.course-title {
+    color: var(--clr-blue);
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .course-professor {
+    font-weight: bold;
+    margin-top: 2rem;
+    font-size: 18px;
+
+  }
+  
+  .course-description {
+    margin-top: 2rem;
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 50rem;
+    font-size: 18px;
+  }
+
+  .bar {
+    width: 300px;
+    height: 30px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 5px;
+
+  }
+
+  .bar::after {
+    content: '';
+    display: block;
+    background-color: var(--clr-blue);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  .bar1::after {
+    width: calc((var(--overall-rating) / 5) * 100%);
+    background-color: var(--clr-blue);
+  }
+
+  .bar2::after {
+    width: calc((var(--difficulty) / 5) * 100%);
+    background-color: var(--clr-blue);
+  }
+
+  .bar3::after {
+    width: calc((var(--course-load) / 5) * 100%);
+    background-color: var(--clr-blue);
+  }
+
+  .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .graph__container{
+    /* max-width: 450px; */
+    margin-left: 60rem;
+    margin-bottom: 10rem;
+    margin-top: -15rem;
+
+
+  }
+
+  /* Style for the form */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    max-width: 500px;
+  }
+  
+  form label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  form input {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: var(--clr-blue);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  
+.review label,
+.review input,
+.review button
+.review submit {
+  display: block;
+  margin-bottom: 10px;
+  margin-right: 8rem;
+}
+
+.review{
+    padding-right: 3.5rem;
 }

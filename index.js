@@ -1,11 +1,13 @@
 var prevScrollpos = window.pageYOffset;
+var header = document.getElementsByTagName("header")[0];
+var headerHeight = header.offsetHeight;
 
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementsByTagName("header")[0].style.top = "0";
+    header.style.top = "0";
   } else {
-    document.getElementsByTagName("header")[0].style.top = "-100px";
+    header.style.top = -headerHeight + "px";
   }
   prevScrollpos = currentScrollPos;
 }
